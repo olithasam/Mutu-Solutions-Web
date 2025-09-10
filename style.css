@@ -11,22 +11,31 @@ body {
 
 .navbar {
   position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6); /* semi-transparent */
-  backdrop-filter: blur(8px);      /* glassy effect */
+  top: 40px;                   /* margin from top */
+  left: 50%;                   /* center horizontally */
+  transform: translateX(-50%); /* perfect centering */
+  width: 90%;                  /* slightly narrower than full width */
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
   color: white;
   display: flex;
   justify-content: space-between;
-  padding: 15px 50px;
+  padding: 25px 40px;
+  border-radius: 15px;          /* rounded corners */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3); /* floating effect */
   z-index: 1000;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar.scrolled {
   background: rgba(0, 0, 0, 0.85);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* floating shadow */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
 }
+.navbar ul li {
+  margin-right: 20px;
+}
+
+
 
 
 .navbar ul {
@@ -69,26 +78,36 @@ body {
 .home-content h1 {
   font-size: 3rem;
 }
-
+#about {
+  background: #f9f9f9;
+  text-align: center;
+}
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+}
 .solutions-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  margin-top: 30px;
+  justify-content: center;
 }
-
 .solution {
-  padding: 20px;
-  background: #f4f4f4;
+  background: white;
+  border: 1px solid #ddd;
   border-radius: 10px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease;
-}
-
-.solution.show {
-  opacity: 1;
-  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 40px;
+  flex: 1 1 calc(33% - 40px);
+  min-width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .transport {
   height: 100vh;               /* full screen */
@@ -139,25 +158,57 @@ body {
   box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 
-
-
-.horizontal {
-  background: #eee;
-  overflow-x: scroll;
-}
-
-.scroll-container {
+/* Empowering Centering */
+.empowering {
   display: flex;
-  width: 300%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 60vh;  /* makes it tall enough */
+  background: #f4f4f4;
 }
 
-.scroll-item {
-  flex: 1;
-  padding: 100px;
+/* Empowering centered vertically + horizontally */
+.empowering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background: #ddd;
-  border: 1px solid #ccc;
+  min-height: 40vh;    /* change to taste */
+  padding: 60px 50px;
+  background: #f4f4f4;
 }
+.empowering-content { max-width: 900px; }
+
+/* Video slider */
+.video-slider { width: 100%; overflow: hidden; position: relative; background: #000; }
+
+/* The track is a flex row of slides */
+.slider-track {
+  display: flex;
+  will-change: transform;
+  animation: slideTrack 12s infinite;
+}
+
+/* Each slide takes exactly one viewport width */
+.slide { flex: 0 0 100vw; height: 90vh; } /* use 100vh if you want full viewport height */
+.slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Keyframes — move by viewport widths (clean, predictable) */
+@keyframes slideTrack {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(0); }
+  33%  { transform: translateX(-100vw); }
+  58%  { transform: translateX(-100vw); }
+  66%  { transform: translateX(-200vw); }
+  100% { transform: translateX(-200vw); }
+}
+
 
 footer {
   background: #333;
