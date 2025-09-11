@@ -225,7 +225,7 @@ body {
 .empowering-content { max-width: 900px; }
 
 /* Video slider */
-.video-slider { width: 100%; overflow: hidden; position: relative; background: #000; }
+.video-slider { width: 100%;  overflow: hidden; position: relative; background: #000; }
 
 /* The track is a flex row of slides */
 .slider-track {

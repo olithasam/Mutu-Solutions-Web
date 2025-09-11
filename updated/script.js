@@ -60,6 +60,15 @@ let themeManager;
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize theme manager
     themeManager = new ThemeManager();
+    
+    // Debug logo image loading
+    const headerLogo = document.querySelector('.nav-logo img');
+    const footerLogo = document.querySelector('.footer-logo');
+    [headerLogo, footerLogo].forEach((img) => {
+        if (!img) return;
+        img.addEventListener('load', () => console.log('Logo loaded:', img.src));
+        img.addEventListener('error', () => console.error('Logo failed to load:', img.src));
+    });
     // Get all navigation links
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -340,64 +349,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
-    // Mobile menu toggle (for future enhancement)
-    function createMobileMenu() {
-        const navbar = document.querySelector('.navbar');
+    // Mobile menu toggle
+    (function initMobileMenu() {
         const navMenu = document.querySelector('.nav-menu');
-        const themeToggle = document.querySelector('.theme-toggle');
-        
-        // Create mobile menu button
-        const mobileMenuBtn = document.createElement('button');
-        mobileMenuBtn.className = 'mobile-menu-btn';
-        mobileMenuBtn.innerHTML = '☰';
-        mobileMenuBtn.style.cssText = `
-            display: none;
-            background: none;
-            border: none;
-            color: var(--accent-primary);
-            font-size: 1.5rem;
-            cursor: pointer;
-        `;
-        
-        // Add button to navbar
-        navbar.querySelector('.nav-container').appendChild(mobileMenuBtn);
-        
-        // Toggle mobile menu
-        mobileMenuBtn.addEventListener('click', function() {
-            navMenu.classList.toggle('mobile-active');
-            themeToggle.style.display = navMenu.classList.contains('mobile-active') ? 'flex' : 'none';
-        });
-        
-        // Show/hide mobile menu button based on screen size
-        function toggleMobileMenu() {
-            if (window.innerWidth <= 768) {
-                mobileMenuBtn.style.display = 'block';
-                themeToggle.style.display = 'none';
-                navMenu.style.cssText = `
-                    position: fixed;
-                    top: 80px;
-                    left: 0;
-                    right: 0;
-                    background: var(--navbar-bg);
-                    backdrop-filter: blur(10px);
-                    flex-direction: column;
-                    padding: 20px;
-                    transform: translateY(-100%);
-                    transition: transform 0.3s ease;
-                    box-shadow: 0 8px 32px var(--shadow-accent);
-                `;
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+
+        if (!navMenu || !mobileMenuBtn) return;
+
+        function setMobileState() {
+            const isMobile = window.innerWidth <= 768;
+            mobileMenuBtn.style.display = isMobile ? 'inline-block' : 'none';
+            if (!isMobile) {
+                navMenu.classList.remove('mobile-active');
+                if (themeToggle) themeToggle.style.display = 'flex';
             } else {
-                mobileMenuBtn.style.display = 'none';
-                themeToggle.style.display = 'flex';
-                navMenu.style.cssText = '';
+                if (themeToggle) themeToggle.style.display = navMenu.classList.contains('mobile-active') ? 'flex' : 'none';
             }
         }
-        
-        window.addEventListener('resize', toggleMobileMenu);
-        toggleMobileMenu();
-    }
-    
-    createMobileMenu();
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isActive = navMenu.classList.toggle('mobile-active');
+            mobileMenuBtn.setAttribute('aria-expanded', String(isActive));
+            if (themeToggle) themeToggle.style.display = isActive ? 'flex' : 'none';
+        });
+
+        window.addEventListener('resize', setMobileState);
+        setMobileState();
+    })();
 
     // Add scroll progress indicator
     function createScrollProgress() {
