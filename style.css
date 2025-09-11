@@ -647,6 +647,83 @@ body {
     .detail-media video { height: 320px; }
 }
 
+/* Shipping Details theming */
+.detail--shipping .detail-hero {
+    background: radial-gradient(1000px 400px at 20% -10%, rgba(0,119,204,0.25), transparent),
+                linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+}
+.detail--shipping .detail-hero .section-title { color: white; }
+.detail--shipping .detail-hero .detail-subtitle { color: rgba(255,255,255,0.9); }
+
+/* Breadcrumbs */
+.breadcrumbs { display: flex; gap: 8px; align-items: center; margin-top: 12px; }
+.breadcrumbs a { color: #e6f3ff; text-decoration: none; font-weight: 500; }
+.breadcrumbs span { color: rgba(255,255,255,0.7); }
+
+/* Stats bar */
+.stats-bar { background: var(--bg-secondary); padding: 24px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.stat-item { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 16px; text-align: center; box-shadow: 0 10px 24px var(--shadow-color); }
+.stat-item h3 { color: var(--accent-primary); font-size: 1.8rem; line-height: 1; margin-bottom: 6px; }
+.stat-item p { color: var(--text-secondary); font-weight: 500; }
+
+@media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .stats-grid { grid-template-columns: 1fr; } }
+
+/* Pills and CTA */
+.pill-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 14px; }
+.pill { background: var(--bg-secondary); border: 1px solid var(--border-color); color: var(--text-primary); padding: 8px 12px; border-radius: 999px; font-size: 0.95rem; font-weight: 600; }
+.detail-cta { display: flex; gap: 12px; align-items: center; margin-top: 18px; flex-wrap: wrap; }
+.quote-btn.outline { background: transparent; color: var(--accent-primary); border: 2px solid var(--accent-primary); }
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px 18px;
+}
+.feature-grid li {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 12px 14px 12px 36px;
+    box-shadow: 0 6px 16px var(--shadow-color);
+}
+
+/* Download strip */
+.download-strip {
+    background: var(--bg-secondary);
+    padding: 40px 0 60px;
+}
+.download-strip-inner {
+    display: grid;
+    grid-template-columns: 1.5fr auto;
+    gap: 20px;
+    align-items: center;
+}
+.download-strip h3 { color: var(--accent-primary); margin-bottom: 6px; }
+.download-strip p { color: var(--text-secondary); }
+
+@media (max-width: 768px) {
+    .download-strip-inner { grid-template-columns: 1fr; gap: 12px; }
+}
+
+/* Shipping Details: additional sections */
+.video-section { padding: 20px 0 40px; background: var(--bg-primary); }
+.video-container { display: grid; gap: 16px; }
+.video-container h2 { color: var(--accent-primary); }
+.video-player { width: 100%; max-width: 100%; border-radius: 16px; box-shadow: 0 20px 40px var(--shadow-color); }
+
+.benefits-section { padding: 20px 0 40px; }
+.benefits-section h2 { color: var(--accent-primary); margin-bottom: 18px; }
+.feature-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 14px; padding: 18px 20px; box-shadow: 0 10px 24px var(--shadow-color); margin-bottom: 16px; }
+.feature-card h3 { color: var(--accent-primary); margin-bottom: 8px; }
+.feature-card p { color: var(--text-secondary); }
+
+.cta-section { padding: 40px 0 80px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); color: white; text-align: center; }
+.cta-section h2 { color: white; margin-bottom: 10px; }
+.cta-section p { color: rgba(255,255,255,0.9); margin-bottom: 18px; }
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

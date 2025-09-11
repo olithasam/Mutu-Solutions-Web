@@ -6,91 +6,10 @@
     <title>Ocean Shipping Solutions - MUTU Solutions</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Additional styles specific to the shipping page */
-        .feature-card {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 24px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin: 40px 0;
-        }
-        
-        .benefit-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-        }
-        
-        .benefit-icon {
-            font-size: 24px;
-            background: #e9f7ff;
-            padding: 12px;
-            border-radius: 8px;
-            flex-shrink: 0;
-        }
-        
-        .testimonial-section {
-            background: #f8f9fa;
-            padding: 60px 0;
-            margin: 60px 0;
-        }
-        
-        .testimonial {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-style: italic;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        
-        .testimonial-author {
-            margin-top: 24px;
-            font-weight: 600;
-            font-style: normal;
-        }
-        
-        .cta-section {
-            text-align: center;
-            padding: 60px 0;
-            background: linear-gradient(135deg, #0066cc 0%, #003366 100%);
-            color: white;
-            border-radius: 16px;
-            margin: 60px 0;
-        }
-        
-        .learn-more-btn {
-            display: inline-block;
-            background: #0066cc;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 20px;
-            transition: background 0.3s ease;
-        }
-        
-        .learn-more-btn:hover {
-            background: #0052a3;
-        }
-    </style>
 </head>
 <body>
-    <nav class="navbar">
+     <!-- Floating Navigation -->
+     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html" class="logo-link" aria-label="MUTU Solutions Home">
@@ -111,88 +30,86 @@
         </div>
     </nav>
 
-    <main class="detail-page">
+    <main class="detail-page detail--shipping">
         <section class="detail-hero">
             <div class="container">
                 <h1 class="section-title">Ocean Shipping Solutions</h1>
                 <p class="detail-subtitle">End-to-end ocean freight services with real-time visibility and compliance for global supply chains.</p>
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="index.html#home">Home</a>
+                    <span>/</span>
+                    <a href="index.html#transport">Transport</a>
+                    <span>/</span>
+                    <span>Ocean Shipping</span>
+                </nav>
             </div>
         </section>
+
+        <!-- Key Stats -->
+        <!-- <section class="stats-bar">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>120+</h3>
+                    <p>Global Trade Lanes</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.3%</h3>
+                    <p>On-time Documentation</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Operations Support</p>
+                </div>
+                <div class="stat-item">
+                    <h3>35%</h3>
+                    <p>Avg. Cost Savings</p>
+                </div>
+            </div>
+        </section> -->
 
         <section class="detail-content">
             <div class="container detail-grid">
                 <div class="detail-media">
-                    <video controls autoplay muted loop poster="./assets/shipping-poster.jpg">
-                        <source src="./assets/shipping.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
+                    <video controls autoplay muted loop>
+                        <source src="./assets/transport1.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="detail-text">
                     <h2>Global Ocean Freight Expertise</h2>
                     <p>We orchestrate bookings, documentation, customs, and port operations across global shipping lanes. Our platform aggregates vessel schedules, rate cards, and carrier allocations to optimize cost and transit time while ensuring compliance with international regulations.</p>
-                    
                     <h3>Key Features</h3>
-                    <div class="benefits-grid">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">🚢</div>
-                            <div>
-                                <h4>Multi-Carrier Booking</h4>
-                                <p>Access to major shipping lines with dynamic rate selection</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">📊</div>
-                            <div>
-                                <h4>Real-Time Tracking</h4>
-                                <p>Live vessel tracking and accurate ETA predictions</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">📝</div>
-                            <div>
-                                <h4>Automated Documentation</h4>
-                                <p>Streamlined bill of lading, customs filings, and compliance</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">⚓</div>
-                            <div>
-                                <h4>Port Management</h4>
-                                <p>Port congestion insights and alternative routing options</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">💰</div>
-                            <div>
-                                <h4>Integrated Finance</h4>
-                                <p>Automated invoicing, payment processing, and exception management</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">🌐</div>
-                            <div>
-                                <h4>Global Coverage</h4>
-                                <p>Comprehensive service across all major trade routes worldwide</p>
-                            </div>
-                        </div>
+                    <ul class="feature-list">
+                        <li>Multi-carrier booking with dynamic rate selection</li>
+                        <li>Real-time vessel tracking and ETA predictions</li>
+                        <li>Automated documentation and customs workflows</li>
+                        <li>Port congestion insights and alternative routing</li>
+                        <li>Integrated invoicing and exception management</li>
+                        <li>Global coverage across all major trade routes</li>
+                    </ul>
+                    <div class="detail-cta">
+                        <a class="learn-more-btn" href="./assets/proposals/ocean-shipping-proposal.pdf" download>Download Proposal</a>
+                       
                     </div>
-                    
-                    <a class="learn-more-btn" href="./assets/proposals/ocean-shipping-proposal.pdf" download>Download Shipping Proposal</a>
                 </div>
             </div>
         </section>
         
-        <section class="testimonial-section">
+
+        <!-- Video Section -->
+        <section class="video-section">
             <div class="container">
-                <div class="testimonial">
-                    "MUTU's Ocean Shipping Solutions reduced our freight costs by 22% and improved delivery reliability by 35%. Their real-time tracking and port analytics helped us navigate the supply chain challenges of the past year seamlessly."
-                    <div class="testimonial-author">- Michael Chen, Logistics Director at Global Importers Ltd.</div>
+                <div class="video-container">
+                    <h2>See Our Shipping Solutions in Action</h2>
+                    <video class="video-player" controls poster="https://via.placeholder.com/900x506/0066cc/ffffff?text=Ocean+Shipping+Video">
+                        <source src="./assets/shipping.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </section>
         
-        <section class="container">
-            <h2 class="section-title" style="text-align: center;">Benefits of Our Ocean Shipping Solutions</h2>
+        <section class="benefits-section container">
+            <h2>Benefits of Our Ocean Shipping Solutions</h2>
             
             <div class="feature-card">
                 <h3>Cost Optimization</h3>
@@ -222,6 +139,7 @@
                 <a href="#quote" class="learn-more-btn" style="background: white; color: #0066cc;">Request a Quote</a>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
@@ -237,7 +155,6 @@
                     <ul>
                         <li><a href="index.html#home">Home</a></li>
                         <li><a href="index.html#transport">Transport</a></li>
-                        <li><a href="index.html#solutions">Solutions</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
@@ -256,6 +173,9 @@
                         <a href="#" class="social-icon">💼</a>
                         <a href="#" class="social-icon">📷</a>
                     </div>
+                    <div class="download-action">
+                        <a class="quote-btn" href="./assets/company-profile.pdf" download>Download Company Profile</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -267,3 +187,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
