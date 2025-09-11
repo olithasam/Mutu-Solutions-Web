@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ground Transportation - MUTU Solutions</title>
+    <title>Ocean Shipping Solutions - MUTU Solutions</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Floating Navigation -->
-    <nav class="navbar">
+     <!-- Floating Navigation -->
+     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="index.html" class="logo-link" aria-label="MUTU Solutions Home">
@@ -29,14 +29,43 @@
             <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
         </div>
     </nav>
-    
-    <main class="detail-page">
+
+    <main class="detail-page detail--shipping">
         <section class="detail-hero">
             <div class="container">
-                <h1 class="section-title">Ground Transportation</h1>
-                <p class="detail-subtitle">High-performance road transport with live visibility and automated dispatch.</p>
+                <h1 class="section-title">Ocean Shipping Solutions</h1>
+                <p class="detail-subtitle">End-to-end ocean freight services with real-time visibility <br>and compliance for global supply chains.</p>
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <a href="index.html#home">Home</a>
+                    <span>/</span>
+                    <a href="index.html#transport">Transport</a>
+                    <span>/</span>
+                    <span>Ocean Shipping</span>
+                </nav>
             </div>
         </section>
+
+        <!-- Key Stats -->
+        <!-- <section class="stats-bar">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>120+</h3>
+                    <p>Global Trade Lanes</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.3%</h3>
+                    <p>On-time Documentation</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Operations Support</p>
+                </div>
+                <div class="stat-item">
+                    <h3>35%</h3>
+                    <p>Avg. Cost Savings</p>
+                </div>
+            </div>
+        </section> -->
 
         <section class="detail-content">
             <div class="container detail-grid">
@@ -46,31 +75,83 @@
                     </video>
                 </div>
                 <div class="detail-text">
-                    <h2>How It Works</h2>
-                    <p>We connect shippers, drivers, and operations with real-time dispatching, route optimization, and proof-of-delivery to deliver on-time performance at scale across national networks.</p>
+                    <h2>Global Ocean Freight Expertise</h2>
+                    <p>We orchestrate bookings, documentation, customs, and port operations across global shipping lanes. Our platform aggregates vessel schedules, rate cards, and carrier allocations to optimize cost and transit time while ensuring compliance with international regulations.</p>
                     <h3>Key Features</h3>
                     <ul class="feature-list">
-                        <li>Smart routing with traffic-aware ETAs</li>
-                        <li>Driver mobile app with electronic POD</li>
-                        <li>Fleet health monitoring and maintenance schedules</li>
-                        <li>Temperature and seal monitoring for sensitive goods</li>
-                        <li>Customer notifications and SLA tracking</li>
+                        <li>Multi-carrier booking with dynamic rate selection</li>
+                        <li>Real-time vessel tracking and ETA predictions</li>
+                        <li>Automated documentation and customs workflows</li>
+                        <li>Port congestion insights and alternative routing</li>
+                        <li>Integrated invoicing and exception management</li>
+                        <li>Global coverage across all major trade routes</li>
                     </ul>
-                    <a class="learn-more-btn" href="./assets/proposals/ground-transport-proposal.pdf" download>Download Proposal</a>
+                    <div class="detail-cta">
+                        <a class="learn-more-btn" href="./assets/documents/MUTU WMS.pdf" download>Download Proposal</a>
+                       
+                    </div>
                 </div>
             </div>
         </section>
+        
+
+        <!-- Video Section -->
+        <section class="video-section">
+            <div class="container">
+                <div class="video-container" id="shipping-video-container">
+                    <h2>See Our Shipping Solutions in Action</h2>
+                    <div class="video-frame">
+                        <img class="video-cover" id="shipping-video-cover" src="./assets/transportimg.png" alt="Ocean Shipping Cover">
+                        <button class="video-play-overlay" id="shipping-video-play" aria-label="Play video"><span>▶</span></button>
+                        <video class="video-player" id="shipping-video" controls playsinline poster="https://via.placeholder.com/900x506/0066cc/ffffff?text=Ocean+Shipping+Video">
+                            <source src="./assets/service-vid/HR  BY MUTU.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="benefits-section container">
+            <h2>Benefits of Our Ocean Shipping Solutions</h2>
+            
+            <div class="feature-card">
+                <h3>Cost Optimization</h3>
+                <p>Leverage our carrier relationships and volume discounts to reduce your shipping expenses. Our dynamic rate selection ensures you always get the best value for your specific routing needs.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Supply Chain Visibility</h3>
+                <p>Gain real-time insights into your shipments' status from origin to destination. Proactive alerts for exceptions or delays allow you to manage disruptions before they impact your operations.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Regulatory Compliance</h3>
+                <p>Navigate complex international trade regulations with confidence. Our system automatically updates compliance requirements and ensures all documentation meets current standards.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Risk Mitigation</h3>
+                <p>Reduce supply chain risks with alternative routing options, port congestion forecasting, and carrier performance analytics. Our solutions help you build resilience into your logistics operations.</p>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Optimize Your Ocean Shipping?</h2>
+                <p>Get a customized quote and discover how our solutions can transform your global logistics.</p>
+                <a href="#quote" class="learn-more-btn" style="background: white; color: #0066cc;">Request a Quote</a>
+            </div>
+        </section>
+
     </main>
 
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <img src="./assets/mutusolutions.png" alt="MUTU Solutions" class="logo-img footer-logo">
                     <h3>About MUTU Solutions</h3>
-                    <p>Leading the future of logistics with innovative technology and global reach. We connect businesses worldwide through seamless supply chain solutions.</p>
+                    <p>Leading the future of logistics with innovative technology and global reach.</p>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
@@ -95,6 +176,10 @@
                         <a href="#" class="social-icon">💼</a>
                         <a href="#" class="social-icon">📷</a>
                     </div>
+                    <div class="detail-cta">
+                        <a class="learn-more-btn" href="./assets/documents/MUTU WMS.pdf" download>Download Proposal</a>
+                       
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -106,3 +191,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

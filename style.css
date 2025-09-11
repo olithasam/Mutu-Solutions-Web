@@ -613,7 +613,7 @@ body {
 
 .detail-subtitle {
     color: var(--text-secondary);
-    margin-top: 10px;
+    margin-top: -50px;
 }
 
 .detail-content {
