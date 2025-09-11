@@ -395,6 +395,47 @@ body {
     margin-bottom: 80px;
 }
 
+/* Products reveal animations */
+.products .intro-text,
+.products .product-demo .demo-details h3,
+.products .product-demo .demo-details p,
+.products .product-demo .demo-details ul,
+.products .product-demo .demo-details li {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.products.products-revealed .intro-text:nth-child(1) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.05s;
+}
+
+.products.products-revealed .intro-text:nth-child(2) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.products.products-revealed .product-demo .demo-details h3 { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.products.products-revealed .product-demo .demo-details p  { opacity: 1; transform: translateY(0); transition-delay: 0.2s; }
+.products.products-revealed .product-demo .demo-details ul { opacity: 1; transform: translateY(0); transition-delay: 0.3s; }
+
+/* Stagger list items */
+.products.products-revealed .product-demo .demo-details li { opacity: 1; transform: translateY(0); }
+.products.products-revealed .product-demo .demo-details li:nth-child(1) { transition-delay: 0.35s; }
+.products.products-revealed .product-demo .demo-details li:nth-child(2) { transition-delay: 0.4s; }
+.products.products-revealed .product-demo .demo-details li:nth-child(3) { transition-delay: 0.45s; }
+.products.products-revealed .product-demo .demo-details li:nth-child(4) { transition-delay: 0.5s; }
+.products.products-revealed .product-demo .demo-details li:nth-child(5) { transition-delay: 0.55s; }
+
+/* Subtle hover on list items */
+.products .product-demo .demo-details li:hover {
+    transform: translateY(-2px);
+    color: var(--text-primary);
+}
+
 .intro-text h2 {
     font-size: 2.5rem;
     color: var(--accent-primary);

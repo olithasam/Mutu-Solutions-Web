@@ -424,6 +424,21 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionObserver.observe(section);
     });
 
+    // Products section staggered reveal
+    const productsSection = document.querySelector('#products.products');
+    if (productsSection) {
+        const productsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    productsSection.classList.add('products-revealed');
+                    productsObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -80px 0px' });
+
+        productsObserver.observe(productsSection);
+    }
+
     // Add hover effects for interactive elements
     const interactiveElements = document.querySelectorAll('.solution-card, .cta-button, .learn-more-btn, .quote-btn');
     
