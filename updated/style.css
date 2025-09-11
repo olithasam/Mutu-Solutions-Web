@@ -358,7 +358,7 @@ body {
 .video-slide {
     width: 33.333%;
     position: relative;
-    height: 400px;
+    height: 600px;
 }
 
 .video-slide video {
