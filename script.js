@@ -304,8 +304,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add loading animation for images and videos
-    const mediaElements = document.querySelectorAll('video, img');
+    // Add loading animation for images and videos (exclude explicit covers)
+    const mediaElements = document.querySelectorAll('video, img:not(.video-cover)');
     mediaElements.forEach(element => {
         element.addEventListener('load', function() {
             console.log('Media loaded successfully:', this.src);
@@ -465,4 +465,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     console.log('MUTU Solutions website loaded successfully!');
+});
+
+// Shipping details page: play overlay behavior
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('shipping-video-container');
+    const playBtn = document.getElementById('shipping-video-play');
+    const videoEl = document.getElementById('shipping-video');
+    const coverEl = document.getElementById('shipping-video-cover');
+
+    if (container && playBtn && videoEl) {
+        const startPlayback = () => {
+            container.classList.add('playing');
+            if (videoEl.paused) {
+                videoEl.play().catch(() => {
+                    // Autoplay blocked; ensure controls visible
+                    videoEl.setAttribute('controls', 'controls');
+                });
+            }
+        };
+
+        playBtn.addEventListener('click', startPlayback);
+        if (coverEl) coverEl.addEventListener('click', startPlayback);
+
+        // Add class when playing
+        videoEl.addEventListener('play', () => container.classList.add('playing'));
+
+        // ❌ Remove pause handler (we don’t want cover to show on pause)
+        // Show cover only when video ENDS
+        videoEl.addEventListener('ended', () => container.classList.remove('playing'));
+    }
 });
