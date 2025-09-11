@@ -1,205 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MUTU Solutions</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUTU Solutions - Logistics Made Visible</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Floating Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link" aria-label="MUTU Solutions Home">
+                    <img src="./assets/mutusolutions.png" alt="MUTU Solutions" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="#transport" class="nav-link">Transport</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#quote" class="nav-link">Get Quote</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="icon">🌙</span>
+                <span class="text">Dark</span>
+            </button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+        </div>
+    </nav>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">MUTU Solutions</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#products">Products</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="./assets/hero1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Logistics Made Visible</h1>
+            <p class="hero-tagline">Transforming global supply chains with innovative technology and seamless integration</p>
+            <a href="#solutions" class="cta-button">Explore Solutions</a>
+        </div>
+    </section>
 
-  <!-- Home Section -->
-  <section id="home" class="section home">
-    <video autoplay muted loop id="bg-video">
-      <source src="./assets/sample.mp4" type="video/mp4">
-    </video>
-    <div class="home-content">
-      <h1><span>Logistics</span> Made Visible</h1>
-      <p>jhsd jhbdc jhsb dc jhsdc jhdc j dccj  </p>
-    </div>
-  </section>
+    <!-- Six Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <h2 class="section-title">Six Solutions</h2>
+            <div class="solutions-grid">
+                <div class="solution-card fade-in">
+                    <h3>Global Shipping</h3>
+                    <p>Comprehensive worldwide shipping solutions with real-time tracking and optimization across all major trade routes.</p>
+                </div>
+                <div class="solution-card fade-in">
+                    <h3>Transport Integration</h3>
+                    <p>Seamless integration of multiple transport modes including air, sea, rail, and road for maximum efficiency.</p>
+                </div>
+                <div class="solution-card fade-in">
+                    <h3>Innovative Strategies</h3>
+                    <p>Cutting-edge logistics strategies powered by AI and machine learning to optimize your supply chain.</p>
+                </div>
+                <div class="solution-card fade-in">
+                    <h3>Real-time Visibility</h3>
+                    <p>Complete visibility into your shipments with advanced tracking and monitoring capabilities.</p>
+                </div>
+                <div class="solution-card fade-in">
+                    <h3>Cost Optimization</h3>
+                    <p>Intelligent routing and consolidation to reduce costs while maintaining service quality standards.</p>
+                </div>
+                <div class="solution-card fade-in">
+                    <h3>Custom Solutions</h3>
+                    <p>Tailored logistics solutions designed specifically for your business requirements and industry needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Six Solutions -->
-<section id="about" class="section solutions">
-  <h2 class="fade-in">The Six Solutions</h2>
-  <p class="fade-in delay-1">
-    Global shipping solution to move your goods by sea with complete visibility, reliability, and efficiency.
-  </p>
-  <p class="fade-in delay-2">
-    Seamless tiep operations that integrate with multiple transport channels, making logistics smarter and faster.
-  </p>
-  <p class="fade-in delay-3">
-    Innovative logistics strategies designed to reduce cost, optimize performance, and scale with your business growth.
-  </p>
-</section>
+   <!-- Transport System Showcase -->
+    <section id="transport" class="transport-system">
+        <div class="container">
+            <h2 class="section-title">Transport System</h2>
+            <div class="transport-content">
+                <div class="transport-text">
+                    <h3 id="transport-title">Ground Transportation</h3>
+                    <p id="transport-description">Efficient ground transport network connecting cities and regions with real-time tracking and flexible delivery options.</p>
+                    <a id="transport-details-link" class="learn-more-btn" href="transportDetails.html">View Details</a>
+                </div>
+                <div class="transport-video">
+                    <video id="transport-video" autoplay muted loop>
+                        <source src="./assets/transport1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-<!-- Transport System -->
-<section id="transport" class="section transport">
-  <div class="transport-container">
-    <!-- Left Content -->
-    <div class="transport-content">
-      <h2 id="system-title">HR System</h2>
-      <p id="system-desc">
-        Efficient HR system ensuring reliable management of employee data. Track progress in real time with optimized workflows. Seamless HR operations that integrate with multiple business channels, making management smarter and faster. Seamless HR operations that integrate with multiple business channels, making management smarter and faster.
-      </p>
-    </div>
+    <!-- Empowering Section -->
+    <section class="empowering">
+        <div class="container">
+            <h2 class="empowering-title">Empowering Global Commerce</h2>
+            <p class="empowering-text">We believe that every business deserves access to world-class logistics solutions. Our platform connects companies across the globe, enabling seamless trade and commerce through innovative technology and strategic partnerships.</p>
+        </div>
+    </section>
 
-    <!-- Right Video -->
-    <div class="transport-video">
-      <video id="system-video" autoplay muted loop>
-        <source src="./assets/sample.mp4" type="video/mp4">
-        
-      </video>
-    </div>
-  </div>
-</section>
+    <!-- Video Slider -->
+    <section class="video-slider">
+        <div class="container">
+            <h2 class="section-title">Our Operations</h2>
+            <div class="slider-container">
+                <div class="video-slides">
+                    <div class="video-slide active">
+                        <video autoplay muted loop>
+                            <source src="./assets/warehouse.mp4" type="video/mp4">
+                        </video>
+                        <div class="slide-overlay">
+                            <h3>Warehouse Operations</h3>
+                        </div>
+                    </div>
+                    <div class="video-slide">
+                        <video autoplay muted loop>
+                            <source src="./assets/transport1.mp4" type="video/mp4">
+                        </video>
+                        <div class="slide-overlay">
+                            <h3>Transportation Network</h3>
+                        </div>
+                    </div>
+                    <div class="video-slide">
+                        <video autoplay muted loop>
+                            <source src="./assets/shipping.mp4" type="video/mp4">
+                        </video>
+                        <div class="slide-overlay">
+                            <h3>Global Distribution</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="products-intro">
+                <div class="intro-text">
+                    <h2>Advanced Logistics Platform</h2>
+                    <p>Our comprehensive platform integrates all aspects of logistics management, from initial planning to final delivery, providing you with complete control and visibility over your supply chain operations.</p>
+                </div>
+                <div class="intro-text">
+                    <h2>Real-time Analytics</h2>
+                    <p>Make data-driven decisions with our advanced analytics dashboard that provides insights into performance metrics, cost optimization opportunities, and operational efficiency improvements.</p>
+                </div>
+            </div>
+            <div class="product-demo">
+                <div class="demo-video">
+                    <video autoplay muted loop>
+                        <source src="./assets/demo1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="demo-details">
+                    <h3>MUTU Logistics Platform</h3>
+                    <p>Experience the power of our integrated logistics platform with features including:</p>
+                    <ul>
+                        <li>Real-time shipment tracking</li>
+                        <li>Automated route optimization</li>
+                        <li>Multi-modal transport coordination</li>
+                        <li>Custom reporting and analytics</li>
+                        <li>API integration capabilities</li>
+                    </ul>
+                    <a href="#quote" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Empowering (centered) -->
-<section class="section empowering">
-  <div class="empowering-content">
-    <h2>Empowering Your Business with Tailored Logistics Solutions</h2>
-    <p>Another section with animated text (no details).</p>
-  </div>
-</section>
+    <!-- Get Quote Section -->
+    <section id="quote" class="quote-section">
+        <div class="container">
+            <h2 class="quote-title">Get Your Custom Quote</h2>
+            <p class="quote-subtitle">Ready to transform your logistics? Get a personalized quote for your business needs.</p>
+            <form class="quote-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="requirements" name="requirements" placeholder="Tell us about your logistics requirements" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="quote-btn">Get My Quote</button>
+            </form>
+        </div>
+    </section>
 
-<!-- Video slider -->
-<section class="video-slider" aria-label="Video slider">
-  <div class="slider-track">
-    <div class="slide">
-      <video playsinline autoplay muted loop preload="auto">
-        <source src="./assets/sample2.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="slide">
-      <video playsinline autoplay muted loop preload="auto">
-        <source src="./assets/sample.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="slide">
-      <video playsinline autoplay muted loop preload="auto">
-        <source src="./assets/sample3.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <!-- <img src="./assets/mutusolutions.png" alt="MUTU Solutions" class="logo-img footer-logo"> -->
+                    <h3>About MUTU Solutions</h3>
+                    <p>Leading the future of logistics with innovative technology and global reach. We connect businesses worldwide through seamless supply chain solutions.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#transport">Transport</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#quote">Get Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <form class="contact-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="3" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">💼</a>
+                        <a href="#" class="social-icon">📷</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MUTU Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Product Demo -->
-<section id="products" class="section product">
-  <h2>how we simplify your process.</h2>
-
-  <!-- Row for left/right paragraphs -->
-  <div class="product-intro">
-    <p class="left">
-     The Grand Trunk Road or the GT Road is one of the world’s oldest roads and the largest in Asia. Since the domestication of animals in the Mesolithic period, humans started to work on different types of transport mechanisms. Developments in transport systems have come a long way. Today, aeroplanes and jets are the fastest modes of transport. Humans have built jets.
-    </p>
-    <p class="right">
-      The Grand Trunk Road or the GT Road is one of the world’s oldest roads and the largest in Asia. Since the domestication of animals in the Mesolithic period, humans started to work on different types of transport mechanisms. Developments in transport systems have come a long way. Today, aeroplanes and jets are the fastest modes of transport. Humans have built jets.
-  </div>
-
-  <!-- Row for video + info -->
-  <div class="product-demo">
-    <div class="product-video">
-      <video playsinline autoplay muted loop preload="auto">
-        <source src="./assets/demo1.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="product-info">
-      <h3>Product Demo</h3>
-      <p>The Grand Trunk Road or the GT Road is one of the world’s oldest roads and the largest in Asia. Since the domestication of animals in the Mesolithic period, humans started to work on different types of transport mechanisms. </p>
-      <a href="#">learn more</a>
-    </div>
-  </div>
-</section>
-
- <!-- Get a Quote -->
-<section id="pricing" class="section quote">
-  <div class="quote-container">
-    <h2>Get a Quote</h2>
-    <p class="quote-text">
-      Tell us about your logistics needs and we’ll get back to you with a tailored solution.
-    </p>
-    
-    <form class="quote-form">
-      <div class="form-row">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-      </div>
-      <textarea placeholder="Your Requirements" required></textarea>
-      <button type="submit">Request Quote</button>
-    </form>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer id="contact">
-  <div class="footer-container">
-
-    <!-- Column 1: Company info -->
-    <div class="footer-about">
-      <h2>MUTU Solutions</h2>
-      <p>
-        Reliable logistics and transport solutions tailored to your business needs.
-        We simplify processes, reduce costs, and ensure timely deliveries.
-      </p>
-    </div>
-
-    <!-- Column 2: Quick Links -->
-    <div class="footer-links">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Column 3: Contact Form -->
-    <div class="footer-contact">
-      <h3>Reach Us</h3>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-
-    <!-- Column 4: Social Media -->
-    <div class="footer-social">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"></a>
-        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"></a>
-        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
-        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram"></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bottom bar -->
-  <div class="footer-bottom">
-    <p>© 2025 MUTU Solutions. All Rights Reserved.</p>
-  </div>
-</footer>
-
-  <script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Shipping Solutions - MUTU Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles specific to the shipping page */
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+        
+        .benefit-icon {
+            font-size: 24px;
+            background: #e9f7ff;
+            padding: 12px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        
+        .testimonial-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+        
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            margin-top: 24px;
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #0066cc 0%, #003366 100%);
+            color: white;
+            border-radius: 16px;
+            margin: 60px 0;
+        }
+        
+        .learn-more-btn {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        
+        .learn-more-btn:hover {
+            background: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-link" aria-label="MUTU Solutions Home">
+                    <img src="./assets/mutusolutions.png" alt="MUTU Solutions" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="#transport" class="nav-link">Transport</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#quote" class="nav-link">Get Quote</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                <span class="icon">🌙</span>
+                <span class="text">Dark</span>
+            </button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+        </div>
+    </nav>
+
+    <main class="detail-page">
+        <section class="detail-hero">
+            <div class="container">
+                <h1 class="section-title">Ocean Shipping Solutions</h1>
+                <p class="detail-subtitle">End-to-end ocean freight services with real-time visibility and compliance for global supply chains.</p>
+            </div>
+        </section>
+
+        <section class="detail-content">
+            <div class="container detail-grid">
+                <div class="detail-media">
+                    <video controls autoplay muted loop poster="./assets/shipping-poster.jpg">
+                        <source src="./assets/shipping.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="detail-text">
+                    <h2>Global Ocean Freight Expertise</h2>
+                    <p>We orchestrate bookings, documentation, customs, and port operations across global shipping lanes. Our platform aggregates vessel schedules, rate cards, and carrier allocations to optimize cost and transit time while ensuring compliance with international regulations.</p>
+                    
+                    <h3>Key Features</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🚢</div>
+                            <div>
+                                <h4>Multi-Carrier Booking</h4>
+                                <p>Access to major shipping lines with dynamic rate selection</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📊</div>
+                            <div>
+                                <h4>Real-Time Tracking</h4>
+                                <p>Live vessel tracking and accurate ETA predictions</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📝</div>
+                            <div>
+                                <h4>Automated Documentation</h4>
+                                <p>Streamlined bill of lading, customs filings, and compliance</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">⚓</div>
+                            <div>
+                                <h4>Port Management</h4>
+                                <p>Port congestion insights and alternative routing options</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💰</div>
+                            <div>
+                                <h4>Integrated Finance</h4>
+                                <p>Automated invoicing, payment processing, and exception management</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🌐</div>
+                            <div>
+                                <h4>Global Coverage</h4>
+                                <p>Comprehensive service across all major trade routes worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a class="learn-more-btn" href="./assets/proposals/ocean-shipping-proposal.pdf" download>Download Shipping Proposal</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonial-section">
+            <div class="container">
+                <div class="testimonial">
+                    "MUTU's Ocean Shipping Solutions reduced our freight costs by 22% and improved delivery reliability by 35%. Their real-time tracking and port analytics helped us navigate the supply chain challenges of the past year seamlessly."
+                    <div class="testimonial-author">- Michael Chen, Logistics Director at Global Importers Ltd.</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container">
+            <h2 class="section-title" style="text-align: center;">Benefits of Our Ocean Shipping Solutions</h2>
+            
+            <div class="feature-card">
+                <h3>Cost Optimization</h3>
+                <p>Leverage our carrier relationships and volume discounts to reduce your shipping expenses. Our dynamic rate selection ensures you always get the best value for your specific routing needs.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Supply Chain Visibility</h3>
+                <p>Gain real-time insights into your shipments' status from origin to destination. Proactive alerts for exceptions or delays allow you to manage disruptions before they impact your operations.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Regulatory Compliance</h3>
+                <p>Navigate complex international trade regulations with confidence. Our system automatically updates compliance requirements and ensures all documentation meets current standards.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>Risk Mitigation</h3>
+                <p>Reduce supply chain risks with alternative routing options, port congestion forecasting, and carrier performance analytics. Our solutions help you build resilience into your logistics operations.</p>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Optimize Your Ocean Shipping?</h2>
+                <p>Get a customized quote and discover how our solutions can transform your global logistics.</p>
+                <a href="#quote" class="learn-more-btn" style="background: white; color: #0066cc;">Request a Quote</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="./assets/mutusolutions.png" alt="MUTU Solutions" class="logo-img footer-logo">
+                    <h3>About MUTU Solutions</h3>
+                    <p>Leading the future of logistics with innovative technology and global reach.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#transport">Transport</a></li>
+                        <li><a href="index.html#solutions">Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <form class="contact-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="3" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📘</a>
+                        <a href="#" class="social-icon">🐦</a>
+                        <a href="#" class="social-icon">💼</a>
+                        <a href="#" class="social-icon">📷</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MUTU Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
