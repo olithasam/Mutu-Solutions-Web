@@ -53,12 +53,10 @@ class ThemeManager {
     }
 }
 
-// Initialize theme manager
 let themeManager;
 
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize theme manager
     themeManager = new ThemeManager();
     
     // Debug logo image loading
@@ -141,6 +139,11 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Warehousing & Distribution",
             description: "Sustainable warehousing solutions for bulk cargo with specialized handling and intermodal connectivity.",
             videoSrc: "./assets/warehouse.mp4"
+        },
+        {
+            title: "Tiep Services",
+            description: "End-to-end TIEP services ensuring efficient import/export processes with expert documentation and compliance support.",
+            videoSrc: "./assets/hr.mp4"
         }
     ];
 
@@ -177,7 +180,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const mapping = {
                     'Ocean Shipping Solutions': 'shippingDetails.html',
                     'HR Solutions': 'hrDetails.html',
-                    'Warehousing & Distribution': 'warehousingDetails.html'
+                    'Warehousing & Distribution': 'warehousingDetails.html',
+                    'Tiep Services': 'tiepDetails.html'
                 };
                 const href = mapping[currentData.title] || 'transportDetails.html';
                 transportDetailsLink.href = href;
