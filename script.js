@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const mapping = {
                     'Ocean Shipping Solutions': 'shippingDetails.html',
                     'HR Solutions': 'hrDetails.html',
-                    'Warehousing & Distribution': 'warehousingDetails.html',
+                    'Warehousing & Distribution': 'warehouseDetails.html',
                     'Tiep Services': 'tiepDetails.html'
                 };
                 const href = mapping[currentData.title] || 'transportDetails.html';
