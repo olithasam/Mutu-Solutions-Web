@@ -89,7 +89,7 @@ body {
 }
 
 .nav-logo { display: flex; align-items: center; gap: 12px; }
-.nav-logo img { height: 36px; width: auto; object-fit: contain; display: block;  }
+.nav-logo img { height: 50px; width: auto; object-fit: contain; display: block; margin-right: 30px;  }
 .footer-logo { height: 42px; width: auto; object-fit: contain; display: block; margin-bottom: 12px; filter: drop-shadow(0 1px 0 rgba(0,0,0,0.25)); }
 
 .logo-img { height: 36px; width: auto; display: block; }
@@ -831,6 +831,13 @@ body {
 
 .footer-column ul li a:hover {
     color: var(--accent-primary);
+}
+.footer-column img {
+    height: 70px;
+    width: auto;
+    display: block;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 1px 0 rgba(0,0,0,0.25));
 }
 
 .contact-form input,

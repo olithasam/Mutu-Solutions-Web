@@ -58,8 +58,8 @@ class ThemeManager {
     const footerLogo = document.querySelector('.footer-logo');
     if (footerLogo) {
         footerLogo.src = theme === 'dark' 
-            ? './assets/mutu-logo-black.png' 
-            : './assets/mutu-logo-light.png';
+            ? './assets/logo-footer-light.png' 
+            : './assets/logo-footer-light.png';
     }
 
     // Smooth transition effect
