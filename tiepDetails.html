@@ -9,25 +9,32 @@
 </head>
 <body>
      <!-- Floating Navigation -->
-     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="index.html" class="logo-link" aria-label="MUTU Solutions Home">
-                    <img src="./assets/mutusolutions.png" alt="MUTU Solutions" class="logo-img">
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Solutions</a></li>
-                <li><a href="index.html#transport" class="nav-link">Transport</a></li>
-                <li><a href="index.html#products" class="nav-link">Products</a></li>
-                <li><a href="index.html#quote" class="nav-link">Get Quote</a></li>
-            </ul>
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                <span class="icon">🌙</span>
-                <span class="text">Dark</span>
-            </button>
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+     <nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+        <a href="index.html" class="logo-link" aria-label="MUTU Solutions Home">
+            <!-- Default: light logo -->
+            <img src="./assets/logo-footer-dark.png" alt="MUTU Solutions" class="logoimg">
+        </a>
         </div>
+
+        <ul class="nav-menu">
+        <li><a href="index.html#top" class="nav-link">Home</a></li>
+        <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+        <li><a href="index.html#transport" class="nav-link">Transport</a></li>
+        <li><a href="index.html#products" class="nav-link">demo</a></li>
+        <li><a href="index.html#quote" class="nav-link">Quote</a></li>
+        </ul>
+
+        <!-- Theme toggle button -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon">🌙</span>
+        <span class="text">Dark</span>
+        </button>
+
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
     </nav>
 
     <main class="detail-page detail--shipping">
