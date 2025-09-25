@@ -33,24 +33,42 @@ class ThemeManager {
     }
     
     applyTheme(theme) {
-        document.documentElement.setAttribute('data-theme', theme);
-        
-        if (this.themeIcon && this.themeText) {
-            if (theme === 'dark') {
-                this.themeIcon.textContent = '☀️';
-                this.themeText.textContent = 'Light';
-            } else {
-                this.themeIcon.textContent = '🌙';
-                this.themeText.textContent = 'Dark';
-            }
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // Update theme toggle button
+    if (this.themeIcon && this.themeText) {
+        if (theme === 'dark') {
+            this.themeIcon.textContent = '☀️';
+            this.themeText.textContent = 'Light';
+        } else {
+            this.themeIcon.textContent = '🌙';
+            this.themeText.textContent = 'Dark';
         }
-        
-        // Add smooth transition effect
-        document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
-        setTimeout(() => {
-            document.body.style.transition = '';
-        }, 300);
     }
+
+    // Change header logo based on theme
+    const headerLogo = document.querySelector('.nav-logo img');
+    if (headerLogo) {
+        headerLogo.src = theme === 'dark' 
+            ? './assets/mutu-logo-light.png' 
+            : './assets/mutu-logo-black.png';
+    }
+
+    // Change footer logo based on theme
+    const footerLogo = document.querySelector('.footer-logo');
+    if (footerLogo) {
+        footerLogo.src = theme === 'dark' 
+            ? './assets/mutu-logo-black.png' 
+            : './assets/mutu-logo-light.png';
+    }
+
+    // Smooth transition effect
+    document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
+    setTimeout(() => {
+        document.body.style.transition = '';
+    }, 300);
+    }
+
 }
 
 let themeManager;
