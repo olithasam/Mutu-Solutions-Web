@@ -50,8 +50,8 @@ class ThemeManager {
     const headerLogo = document.querySelector('.nav-logo img');
     if (headerLogo) {
         headerLogo.src = theme === 'dark' 
-            ? './assets/mutu-logo-light.png' 
-            : './assets/mutu-logo-black.png';
+            ? './assets/logo-footer-light.png' 
+            : './assets/logo-footer-dark.png';
     }
 
     // Change footer logo based on theme

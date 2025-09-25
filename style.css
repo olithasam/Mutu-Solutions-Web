@@ -67,6 +67,7 @@ body {
 
 /* Navigation Styles */
 .navbar {
+    width: auto;
     position: fixed;
     top: 20px;
     left: 50%;
@@ -89,7 +90,7 @@ body {
 }
 
 .nav-logo { display: flex; align-items: center; gap: 12px; }
-.nav-logo img { height: 50px; width: auto; object-fit: contain; display: block; margin-right: 30px;  }
+.nav-logo img { height: 50px; width: auto; object-fit: contain; display: block; margin-right: 100px;  }
 .footer-logo { height: 42px; width: auto; object-fit: contain; display: block; margin-bottom: 12px; filter: drop-shadow(0 1px 0 rgba(0,0,0,0.25)); }
 
 .logo-img { height: 36px; width: auto; display: block; }
