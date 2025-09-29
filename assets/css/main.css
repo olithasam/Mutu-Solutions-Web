@@ -596,6 +596,42 @@ h6 {
   margin-top: 8px;
   font-size: 13px;
 }
+.footer .footer-about .download-card {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ea5440;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer .footer-about .download-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.footer .footer-about .file-icon {
+  width: 36px;
+  height: 36px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/337/337946.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.footer .footer-about .file-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+
 
 /*--------------------------------------------------------------
 # Preloader
@@ -3414,12 +3450,60 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.service-details .sidebar h4 {
-  color: var(--heading-color);
-  margin-bottom: 1.5rem;
-  font-size: 1.3rem;
-  font-weight: 600;
+.download-section {
+  max-width: 500px;
+  margin: 2rem auto;
 }
+
+.download-section h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+  text-align: left;
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-decoration: none; /* remove underline */
+  color: inherit; /* use text color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.file-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.pdf-icon { background-image: url('https://cdn-icons-png.flaticon.com/512/337/337946.png'); }
+.doc-icon { background-image: url('https://cdn-icons-png.flaticon.com/512/337/337932.png'); }
+
+.file-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-name { font-weight: 600; color: var(--heading-color); }
+.file-meta { font-size: 0.85rem; color: var(--heading-color); margin-top: 2px; }
+
+
+
 
 .service-details .service-facts {
   list-style: none;
