@@ -3234,7 +3234,7 @@ section,
 
 .service-details .service-content .service-image {
   margin: 2.5rem 0;
-  position: relative; /* needed so play button stays centered */
+  position: relative; 
 }
 
 .service-details .service-content .service-image img {
@@ -3243,9 +3243,30 @@ section,
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
+.video-player {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.video-play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
 
 .service-details .service-content .service-image .video-player {
-  display: none; /* hidden until play button clicked */
+  display: none; 
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);

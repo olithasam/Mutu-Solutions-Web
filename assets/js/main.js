@@ -206,24 +206,42 @@
 
 //service details video player
 
-   const playButton = document.getElementById('shipping-video-play');
-  const video = document.getElementById('shipping-video');
-  const thumbnail = document.getElementById('shipping-thumbnail');
+const playButton = document.getElementById('shipping-video-play');
+const thumbnail = document.getElementById('shipping-thumbnail');
+const container = document.getElementById('video-container');
 
-  playButton.addEventListener('click', () => {
-    playButton.style.display = 'none';
-    thumbnail.style.display = 'none';  
-    video.style.display = 'block';     
-    video.play();                      
-  });
+playButton.addEventListener('click', () => {
+  // Hide thumbnail and play button
+  playButton.style.display = 'none';
+  thumbnail.style.display = 'none';
 
-  // When video ends, show image + button again
+  // Create video element dynamically
+  const video = document.createElement('video');
+  video.className = 'video-player';
+  video.controls = true;
+  video.playsInline = true;
+  video.autoplay = true;
+  video.muted = false; 
+  video.style.display = 'block';
+
+  // Add source
+  const source = document.createElement('source');
+  source.src = './assets/service-vid/mutu solution (remake).mp4'; 
+  source.type = 'video/mp4';
+
+  video.appendChild(source);
+  container.appendChild(video);
+
+  // Play the video after adding to DOM
+  video.play().catch(err => console.log("Video play error:", err));
+
+  // When video ends, remove video and show thumbnail + button again
   video.addEventListener('ended', () => {
-    video.style.display = 'none';     
-    thumbnail.style.display = 'block'; 
+    container.removeChild(video);
+    thumbnail.style.display = 'block';
     playButton.style.display = 'block';
-    video.currentTime = 0;             
   });
+});
 
 
 
