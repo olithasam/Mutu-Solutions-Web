@@ -573,7 +573,16 @@ h6 {
 .footer .footer-contact p {
   margin-bottom: 5px;
 }
+.footer .footer-about ul li {
+  padding: 23px 0;
+  display: flex;
+  align-items: center;
+}
 
+.footer .footer-about p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  
+}
 .footer .copyright {
   padding: 25px 0;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
