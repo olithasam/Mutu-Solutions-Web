@@ -3234,13 +3234,42 @@ section,
 
 .service-details .service-content .service-image {
   margin: 2.5rem 0;
+  position: relative; /* needed so play button stays centered */
 }
 
 .service-details .service-content .service-image img {
   width: 100%;
   height: auto;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
+
+.service-details .service-content .service-image .video-player {
+  display: none; /* hidden until play button clicked */
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-details .service-content .service-image .video-play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.service-details .service-content .service-image .video-play-overlay:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 
 .service-details .service-content p {
   margin-bottom: 1.5rem;

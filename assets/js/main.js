@@ -204,30 +204,26 @@
 
 })();
 
+//service details video player
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   const container = document.querySelector('.service-image'); // ✅ use your div
-//   const playBtn = document.getElementById('shipping-video-play');
-//   const videoEl = document.getElementById('shipping-video');
+   const playButton = document.getElementById('shipping-video-play');
+  const video = document.getElementById('shipping-video');
+  const thumbnail = document.getElementById('shipping-thumbnail');
 
-//   if (container && playBtn && videoEl) {
-//     const startPlayback = () => {
-//       container.classList.add('js-video-playing'); // ✅ JS-only class
-//       if (videoEl.paused) {
-//         videoEl.play().catch(() => {
-//           // Autoplay blocked; ensure controls visible
-//           videoEl.setAttribute('controls', 'controls');
-//         });
-//       }
-//     };
+  playButton.addEventListener('click', () => {
+    playButton.style.display = 'none';
+    thumbnail.style.display = 'none';  
+    video.style.display = 'block';     
+    video.play();                      
+  });
 
-//     playBtn.addEventListener('click', startPlayback);
+  // When video ends, show image + button again
+  video.addEventListener('ended', () => {
+    video.style.display = 'none';     
+    thumbnail.style.display = 'block'; 
+    playButton.style.display = 'block';
+    video.currentTime = 0;             
+  });
 
-//     // Add class when playing
-//     videoEl.addEventListener('play', () => container.classList.add('js-video-playing'));
 
-//     // Remove class when video ends
-//     videoEl.addEventListener('ended', () => container.classList.remove('js-video-playing'));
-//   }
-// });
 
