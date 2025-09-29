@@ -1,10 +1,4 @@
-/**
-* Template Name: Clarity
-* Template URL: https://bootstrapmade.com/clarity-bootstrap-agency-template/
-* Updated: Sep 13 2025 with Bootstrap v5.3.8
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 (function() {
   "use strict";
@@ -209,3 +203,31 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const container = document.querySelector('.service-image'); // ✅ use your div
+//   const playBtn = document.getElementById('shipping-video-play');
+//   const videoEl = document.getElementById('shipping-video');
+
+//   if (container && playBtn && videoEl) {
+//     const startPlayback = () => {
+//       container.classList.add('js-video-playing'); // ✅ JS-only class
+//       if (videoEl.paused) {
+//         videoEl.play().catch(() => {
+//           // Autoplay blocked; ensure controls visible
+//           videoEl.setAttribute('controls', 'controls');
+//         });
+//       }
+//     };
+
+//     playBtn.addEventListener('click', startPlayback);
+
+//     // Add class when playing
+//     videoEl.addEventListener('play', () => container.classList.add('js-video-playing'));
+
+//     // Remove class when video ends
+//     videoEl.addEventListener('ended', () => container.classList.remove('js-video-playing'));
+//   }
+// });
+
