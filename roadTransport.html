@@ -226,7 +226,7 @@ and compliance for domestic and cross-border supply chains.</p>
           <!-- Contact Form -->
           <div class="inquiry-form">
             <h4>Get a Quote</h4>
-            <form action="forms/get-a-quote.php" method="post" class="php-email-form">
+            <form action="https://formspree.io/f/xeoralwz" method="POST" class="php-email-form">
               <div class="form-group mb-3">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
               </div>
@@ -236,16 +236,23 @@ and compliance for domestic and cross-border supply chains.</p>
               <div class="form-group mb-3">
                 <input type="tel" name="phone" class="form-control" id="phone" placeholder="Your Phone">
               </div>
+              
+              <!-- Hidden subject field -->
               <input type="hidden" name="subject" value="Road Transport Service Quote">
+
               <div class="form-group mb-4">
                 <textarea class="form-control" name="message" rows="5" placeholder="Tell us about your transport needs..." required=""></textarea>
               </div>
+
+              <!-- Messages -->
               <div class="loading">Loading</div>
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
+
               <button type="submit" class="btn-submit w-100">Request Quote</button>
             </form>
           </div>
+
 
           <!-- Download Section -->
 <div class="download-section">
