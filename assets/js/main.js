@@ -207,42 +207,46 @@
 
 //service details video player
 
-const playButton = document.getElementById('shipping-video-play');
-const thumbnail = document.getElementById('shipping-thumbnail');
-const container = document.getElementById('video-container');
+document.querySelectorAll('.play-btn').forEach(playButton => {
+  playButton.addEventListener('click', () => {
+    const container = playButton.closest('.service-image');
+    const thumbnail = container.querySelector('.service-thumbnail');
+    const videoContainer = container.querySelector('.video-container');
+    const videoSrc = playButton.getAttribute('data-src');
 
-playButton.addEventListener('click', () => {
-  // Hide thumbnail and play button
-  playButton.style.display = 'none';
-  thumbnail.style.display = 'none';
+    // Hide thumbnail and button
+    playButton.style.display = 'none';
+    thumbnail.style.display = 'none';
 
-  // Create video element dynamically
-  const video = document.createElement('video');
-  video.className = 'video-player';
-  video.controls = true;
-  video.playsInline = true;
-  video.autoplay = true;
-  video.muted = false; 
-  video.style.display = 'block';
+    // Create video element
+    const video = document.createElement('video');
+    video.className = 'video-player';
+    video.controls = true;
+    video.playsInline = true;
+    video.autoplay = true;
+    video.muted = false;
+    video.style.display = 'block';
 
-  // Add source
-  const source = document.createElement('source');
-  source.src = './assets/service-vid/mutu solution (remake).mp4'; 
-  source.type = 'video/mp4';
+    // Add source
+    const source = document.createElement('source');
+    source.src = videoSrc;
+    source.type = 'video/mp4';
 
-  video.appendChild(source);
-  container.appendChild(video);
+    video.appendChild(source);
+    videoContainer.appendChild(video);
 
-  // Play the video after adding to DOM
-  video.play().catch(err => console.log("Video play error:", err));
+    // Play
+    video.play().catch(err => console.log("Video play error:", err));
 
-  // When video ends, remove video and show thumbnail + button again
-  video.addEventListener('ended', () => {
-    container.removeChild(video);
-    thumbnail.style.display = 'block';
-    playButton.style.display = 'block';
+    // When video ends
+    video.addEventListener('ended', () => {
+      videoContainer.removeChild(video);
+      thumbnail.style.display = 'block';
+      playButton.style.display = 'block';
+    });
   });
 });
+
 
 
 // Smooth scroll on page load if URL has hash
