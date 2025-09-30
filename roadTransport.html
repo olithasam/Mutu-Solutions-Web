@@ -40,20 +40,20 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" >Home</a></li>
-          <li><a href="#about">About</a></li>
-          
-          <li class="dropdown"><a href="#services" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="index.html#hero" >Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+
+          <li class="dropdown"><a href="index.html#services" class="active"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-                  <li><a href="#">Road Transport</a></li>
-                  <li><a href="#">Shipping Service</a></li>
-                  <li><a href="#">Warehousing</a></li>
-                  <li><a href="#">Tiep Service</a></li>
-                  <li><a href="#">HR System</a></li>
+                  <li><a href="roadTransport.html">Road Transport</a></li>
+                  <li><a href="shipping.html">Shipping Service</a></li>
+                  <li><a href="warehousing.html">Warehousing</a></li>
+                  <li><a href="tiepService.html">Tiep Service</a></li>
+                  <li><a href="hrSystem.html">HR System</a></li>
             </ul>
           </li>
-          <li><a href="#why">Why Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#why">Why Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -259,30 +259,27 @@ and compliance for domestic and cross-border supply chains.</p>
 
 
           <!-- Download Section -->
-<div class="download-section">
-  <h4>Downloads</h4>
+        <div class="download-section">
+          <h4>Downloads</h4>
 
-  <a href="./assets/documents/MUTU-TRANSPORT - Proposal V 1.1.pdf" download class="download-card" target="_blank" rel="noopener noreferrer">
-    <div class="file-icon pdf-icon"></div>
-    <div class="file-details">
-      <span class="file-name">MUTU-Transport</span>
-      <span class="file-meta">PDF | 658 KB</span>
-    </div>
-  </a>
+          <a href="./assets/documents/MUTU-TRANSPORT - Proposal V 1.1.pdf" download class="download-card" target="_blank" rel="noopener noreferrer">
+            <div class="file-icon pdf-icon"></div>
+            <div class="file-details">
+              <span class="file-name">MUTU-Transport</span>
+              <span class="file-meta">PDF | 658 KB</span>
+            </div>
+          </a>
 
-  <a href="./assets/documents/Inntri Company Profile.pdf" download class="download-card" target="_blank" rel="noopener noreferrer">
-    <div class="file-icon doc-icon"></div>
-    <div class="file-details">
-      <span class="file-name">Company Profile</span>
-      <span class="file-meta">PDF | 20 MB</span>
-    </div>
-  </a>
-</div>
-
-
-
-
+          <a href="./assets/documents/Inntri Company Profile.pdf" download class="download-card" target="_blank" rel="noopener noreferrer">
+            <div class="file-icon doc-icon"></div>
+            <div class="file-details">
+              <span class="file-name">Company Profile</span>
+              <span class="file-meta">PDF | 20 MB</span>
+            </div>
+          </a>
         </div>
+
+      </div>
       </div><!-- End Sidebar -->
 
     </div>
@@ -374,35 +371,9 @@ and compliance for domestic and cross-border supply chains.</p>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/toggle.js"></script>
 
-  <!-- Main JS File -->
-   <script>
-  const themeToggle = document.getElementById("theme-toggle");
-  const body = document.body;
-  const icon = themeToggle.querySelector(".icon");
-  const text = themeToggle.querySelector(".text");
-
-  // Check for saved theme in localStorage
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    icon.textContent = "☀️";
-    // text.textContent = "Light";
-  }
-
-  themeToggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-
-    if (body.classList.contains("dark-mode")) {
-      icon.textContent = "☀️";
-      text.textContent = "Light";
-      localStorage.setItem("theme", "dark");
-    } else {
-      icon.textContent = "🌙";
-      text.textContent = "Dark";
-      localStorage.setItem("theme", "light");
-    }
-  });
-</script>
+  
   <script src="assets/js/main.js"></script>
 
 </body>

@@ -244,3 +244,12 @@ playButton.addEventListener('click', () => {
 });
 
 
+// Smooth scroll on page load if URL has hash
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.location.hash) {
+    const section = document.querySelector(window.location.hash);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+});

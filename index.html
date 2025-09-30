@@ -553,35 +553,9 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/toggle.js"></script>
 
   <!-- Main JS File -->
-   <script>
-  const themeToggle = document.getElementById("theme-toggle");
-  const body = document.body;
-  const icon = themeToggle.querySelector(".icon");
-  const text = themeToggle.querySelector(".text");
-
-  // Check for saved theme in localStorage
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark-mode");
-    icon.textContent = "☀️";
-    // text.textContent = "Light";
-  }
-
-  themeToggle.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-
-    if (body.classList.contains("dark-mode")) {
-      icon.textContent = "☀️";
-      text.textContent = "Light";
-      localStorage.setItem("theme", "dark");
-    } else {
-      icon.textContent = "🌙";
-      text.textContent = "Dark";
-      localStorage.setItem("theme", "light");
-    }
-  });
-</script>
 
   <script src="assets/js/main.js"></script>
 
