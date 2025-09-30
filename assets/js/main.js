@@ -204,6 +204,7 @@
 
 })();
 
+
 //service details video player
 
 const playButton = document.getElementById('shipping-video-play');
