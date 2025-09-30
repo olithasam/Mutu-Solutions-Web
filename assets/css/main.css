@@ -526,7 +526,17 @@ h6 {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+ 
+  .theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 60px; /* space next to mobile-nav-toggle */
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
 }
+
 
 /*--------------------------------------------------------------
 # Global Footer
@@ -843,6 +853,14 @@ h6 {
 
   .page-title .title-wrapper p {
     font-size: 1rem;
+  }
+  .theme-toggle {
+    position: absolute;
+    top: 1px;
+    right: 60px; /* space next to mobile-nav-toggle */
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
   }
 }
 
