@@ -58,7 +58,11 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#about">Get Started</a>
+      <!-- Theme toggle button -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon">🌙</span>
+        <!-- <span class="text">Dark</span> -->
+        </button>
 
     </div>
   </header>
@@ -372,6 +376,33 @@ and compliance for domestic and cross-border supply chains.</p>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
   <!-- Main JS File -->
+   <script>
+  const themeToggle = document.getElementById("theme-toggle");
+  const body = document.body;
+  const icon = themeToggle.querySelector(".icon");
+  const text = themeToggle.querySelector(".text");
+
+  // Check for saved theme in localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    icon.textContent = "☀️";
+    // text.textContent = "Light";
+  }
+
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      icon.textContent = "☀️";
+      text.textContent = "Light";
+      localStorage.setItem("theme", "dark");
+    } else {
+      icon.textContent = "🌙";
+      text.textContent = "Dark";
+      localStorage.setItem("theme", "light");
+    }
+  });
+</script>
   <script src="assets/js/main.js"></script>
 
 </body>

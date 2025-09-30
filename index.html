@@ -62,7 +62,7 @@
       <!-- Theme toggle button -->
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
         <span class="icon">🌙</span>
-        <span class="text">Dark</span>
+        <!-- <span class="text">Dark</span> -->
         </button>
 
     </div>
@@ -565,7 +565,7 @@
   if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-mode");
     icon.textContent = "☀️";
-    text.textContent = "Light";
+    // text.textContent = "Light";
   }
 
   themeToggle.addEventListener("click", () => {
