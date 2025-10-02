@@ -15,6 +15,8 @@
   --accent-color: #197e92; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #131428; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --about-color: #131428;
+  --about-p-color: #e8e7f7;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -50,6 +52,8 @@
   --accent-color: #197e92;
   --surface-color: transparent;
   --contrast-color: #ffffff;
+  --about-color: #131428;
+  --about-p-color: #e8e7f7;
 
   --nav-color: #c8c6e3;
   --nav-background-color: #131428;
@@ -1214,7 +1218,7 @@ section,
   top: 0;
   right: 0;
   z-index: 4;
-  background: var(--surface-color);
+  background: var(--about-color);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
@@ -1251,7 +1255,7 @@ section,
 .about .image-composition .stats-card .stats-item p {
   margin: 0;
   font-size: 0.8rem;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: color-mix(in srgb, var(--about-p-color), transparent 40%);
   font-weight: 500;
   margin-top: 0.5rem;
 }
